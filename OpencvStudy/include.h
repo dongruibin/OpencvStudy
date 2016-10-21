@@ -16,7 +16,7 @@
 //#define USE_FACE_DECT 1
 //#define USE_HARRIS 1
 
-//#define USE_SEX_DECT 1
+#define USE_SEX_DECT 1
 
 
 #endif
