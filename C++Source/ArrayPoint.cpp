@@ -14,8 +14,8 @@
 
 using namespace std;
 
-//#ifdef CodeArrayPointerAndPointerArray
-#if 0
+#ifdef CodeArrayPointerAndPointerArray
+//#if 0
 
 int main(int argc, char** argv)
 {
