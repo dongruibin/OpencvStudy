@@ -3,6 +3,8 @@
 
 //使用Ctrl+k,Ctrl+c进行大段的屏蔽工作
 
+////////这里是进行C++代码熟练的目录
+#define CodeArrayPointerAndPointerArray  1
 
 //定义使用调用哪个文件进行测试
 //#define USE_TEST 1
@@ -16,7 +18,7 @@
 //#define USE_FACE_DECT 1
 //#define USE_HARRIS 1
 
-#define USE_SEX_DECT 1
+//#define USE_SEX_DECT 1
 
 
 #endif
