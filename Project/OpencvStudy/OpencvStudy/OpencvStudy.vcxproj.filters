@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="C++Source">
+      <UniqueIdentifier>{65452894-c158-433b-bca8-7f9cafe0878b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpencvStudy">
+      <UniqueIdentifier>{0d8cffba-5a31-4951-aa1c-cc98825917d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{16b52521-0caf-4da7-9ad5-b6db9a455062}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\classTest.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\TemplateDef.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\codeTest.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\DisplayImage.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\faceDect.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\FaceRecognize.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\GuiUse.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\HarrisTest.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\MatrixTest.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\PointAndScalar.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\roiTest.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\SexDect.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\SurfTest.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\VectorTest.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\WayToAccessPixel.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
