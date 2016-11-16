@@ -10,6 +10,9 @@
     <Filter Include="Header">
       <UniqueIdentifier>{16b52521-0caf-4da7-9ad5-b6db9a455062}</UniqueIdentifier>
     </Filter>
+    <Filter Include="OpencvSource">
+      <UniqueIdentifier>{063273ca-d26d-4f2a-89f6-de0e79d63863}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp">
@@ -59,6 +62,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\OpencvStudy\WayToAccessPixel.cpp">
       <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\FunPointer.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp">
+      <Filter>OpencvSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp">
+      <Filter>OpencvSource</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

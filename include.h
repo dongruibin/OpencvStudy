@@ -11,6 +11,7 @@
 //#define CodeArrayPointerAndPointerArray 1
 //#define ClassTest 1//学习类的使用，指针对象
 //#define TemplateDef 1//学习模板类的使用方式
+//s#define FunPointer 1
 
 
 //定义使用调用哪个文件进行测试
@@ -27,6 +28,25 @@
 
 //#define USE_SEX_DECT 1
 
+
+///////////程序释疑说明////
+/*
+一、命名空间问题
+		所谓C++中的namespace，是指标识符的各种可见范围。C++标准程序库中的所有标识符都被定义于一个
+	名为std的namespace中。
+		<iostream>和<iostream.h>是不一样，前者无后缀，后缀为.h的头文件c++标准已经明确提出不支持了。
+	早些的实现将标准库功能定义在全局空间里，声明在带.h后缀的头文件里。为了正确使用命名空间，规定
+	头文件不使用后缀.h。
+二、外部调用c函数
+		C++程序有时需要调用其他语言编写的函数，最常见的就是调用C语言编写的函数。像所有其他名字一样
+	其他语言中的函数名字也必须在C++中进行声明。
+		这个就需要用到链接指示（linkage directive）指出任意非C++函数所用的语言。
+	格式：
+	extern "C" {}
+
+
+
+*/
 
 #endif
 

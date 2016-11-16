@@ -33,7 +33,7 @@ void DisplayInfo(Mat& img)
 {
 	//cout << img << endl;
 
-	cout << "dims:" << img.dims << endl;
+	cout << "dims:" << img.dims << endl;//¾ØÕóµÄÎ¬
 	cout << "rows:" << img.rows << endl;
 	cout << "cols:" << img.cols << endl;
 	cout << "channels:" << img.channels() << endl;

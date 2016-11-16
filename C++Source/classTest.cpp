@@ -1,7 +1,8 @@
 /////本文件主要是熟悉一下c++面向对象的思想
 #include<iostream>
 #include"include.h"
-#include<string.h>
+//#include<string.h>
+#include<string>
 using namespace std;
 //C++即可以开发面向过程的应用程序，也可以开发面向对象的应用程序。
 //////建立一个父类
@@ -51,7 +52,7 @@ char* CPerson::getName()
 }
 int CPerson::setName(char cName[25])
 {
-	strcpy(m_cName, cName);
+	strcpy_s(m_cName, cName);//strcpy
 	return 0;
 }
 double CPerson::getSalary()
