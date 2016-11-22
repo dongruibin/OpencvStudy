@@ -16,7 +16,7 @@
 //函数指针调用函数。函数指针有两个用途：调用函数和做函数的参数。
 
 using namespace std;
-//#define FPPF 0 
+#define FPPF 0 
 
 #ifdef FunPointer
 
@@ -24,9 +24,9 @@ int main(int argc,char** argv)
 {
 #ifdef FPPF
 	//使用一个指针函数
-	float *find(float (*pionter)[4],int n);//声明指针函数
-	static float score[][4]={{60,70,80,90},{56,89,34,45},{34,23,56,45}};
-	float *p;
+	float *find(float (*pionter)[4],int n);//声明指针函数，形参前一个为数组指针。
+	static float score[][4]={{60,70,80,90},{56,89,34,45},{34,23,56,45}};//
+	float *p;//定义一个存储float类型的指针，是为了缓存一个行地址
 	int i,m;
 	printf("Enter the number to be found:");
 	scanf("%d",&m);
@@ -57,13 +57,18 @@ int main(int argc,char** argv)
 #else
 #endif
 
-float *find(float(*pionter)[4],int n)//定义一个指针函数
+//******************************************************
+//功 能：返回对应位置的指针
+//输 入：一个是数组指针，一个是个数索引
+//输 出：指向float类型的指针
+float *find(float(*pionter)[4],int n)//定义一个指针函数，返回时一个指针
 {
-	float *pt;
+	float *pt;//指向float类型
 	pt=*(pionter+n);
-	return(pt);
+	return(pt);//返回是一个指向float的指针类型
 }
-
+//*****************************************************
+//功 能：返回最大值
 int max(int x,int y)
 {
 	return (x>y?x:y);

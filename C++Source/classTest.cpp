@@ -23,6 +23,9 @@ public:
 	int setIndex(int iIndex);
 	char* getName();
 	int setName(char cName[25]);
+	//添加测试函数
+	int setname(char* cn);
+
 	double getSalary();
 	int setSalary(double dSalary);
 };
@@ -55,6 +58,14 @@ int CPerson::setName(char cName[25])
 	strcpy_s(m_cName, cName);//strcpy
 	return 0;
 }
+/////新添加的内容测试成员函数-----换成指针形式
+int CPerson::setname(char* cn)
+{
+	strcpy_s(m_cName,cn);
+	return 0;
+}
+
+
 double CPerson::getSalary()
 {
 	return m_dSalary;
@@ -69,7 +80,7 @@ int CPerson::setSalary(double dSalary)
 int main(int argc, char** argv)
 {
 	//对象的使用
-	CPerson p;
+	CPerson p,ptr;
 	//定义好指向对象的指针
 	CPerson *h=NULL;//定义指针，指向CPerson类型的对象。（是一个指针，必须要指向对象）
 	h = &p;/////指向对象---
@@ -78,6 +89,8 @@ int main(int argc, char** argv)
 	cout << p.getName() << endl;
 	h->setName("zhang");
 	cout << h->getName() << endl;
+	ptr.setName("zhang");
+	cout<<ptr.getName()<<endl;
 	return 0;
 }
 #else

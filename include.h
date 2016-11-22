@@ -11,13 +11,13 @@
 //#define CodeArrayPointerAndPointerArray 1
 //#define ClassTest 1//学习类的使用，指针对象
 //#define TemplateDef 1//学习模板类的使用方式
-//s#define FunPointer 1
+#define FunPointer 1
 
 
 //定义使用调用哪个文件进行测试
 //#define USE_TEST 1
 //#define USE_VECTOR 1
-#define USE_DISPLAYIMAGE 1
+//#define USE_DISPLAYIMAGE 1
 //#define USE_ROI 1
 //#define USE_WAYTOACCESSPIXEL 1
 //#define USE_SURF_TEST 1
