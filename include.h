@@ -11,7 +11,7 @@
 //#define CodeArrayPointerAndPointerArray 1
 //#define ClassTest 1//学习类的使用，指针对象
 //#define TemplateDef 1//学习模板类的使用方式
-#define FunPointer 1
+//#define FunPointer 1
 
 
 //定义使用调用哪个文件进行测试
@@ -24,7 +24,7 @@
 
 //#define USE_MATRIXTEST 1
 //#define USE_FACE_DECT 1
-//#define USE_HARRIS 1
+#define USE_HARRIS 1
 
 //#define USE_SEX_DECT 1
 

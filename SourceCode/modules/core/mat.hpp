@@ -51,6 +51,14 @@
 #ifdef __cplusplus
 
 //在命名空间cv，形参前面加_进行处理
+//在C++中，被const修饰的类型，试图修改该变量的值的
+//操作都被视为编译错误
+/*
+	在C++中，只有被声明为const的成员函数才能被一个const
+	类对象调用。
+	要声明一个const类型的类成员函数，只需要在成员函数列表后
+	加上关键字const
+*/
 namespace cv
 {
 
@@ -111,6 +119,7 @@ inline Mat::Mat(int _dims, const int* _sz, int _type, const Scalar& _s) : size(&
     *this = _s;
 }
 
+//构造函数，后面带有列表初始化
 inline Mat::Mat(const Mat& m)
     : flags(m.flags), dims(m.dims), rows(m.rows), cols(m.cols), data(m.data),
     refcount(m.refcount), datastart(m.datastart), dataend(m.dataend),
@@ -173,7 +182,7 @@ inline Mat::Mat(Size _sz, int _type, void* _data, size_t _step)
     dataend = datalimit - _step + minstep;
 }
 
-
+//模板-构造函数
 template<typename _Tp> inline Mat::Mat(const vector<_Tp>& vec, bool copyData)
     : flags(MAGIC_VAL | DataType<_Tp>::type | CV_MAT_CONT_FLAG),
     dims(2), rows((int)vec.size()), cols(1), data(0), refcount(0),
@@ -273,15 +282,15 @@ template<typename _Tp> inline Mat::Mat(const MatCommaInitializer_<_Tp>& commaIni
 {
     *this = *commaInitializer;
 }
-
+//析构函数
 inline Mat::~Mat()
 {
     release();
     if( step.p != step.buf )
         fastFree(step.p);
 }
-
-inline Mat& Mat::operator = (const Mat& m)
+//Mat的operator函数：
+inline Mat& Mat::operator = (const Mat& m)//Mat的引用
 {
     if( this != &m )
     {
