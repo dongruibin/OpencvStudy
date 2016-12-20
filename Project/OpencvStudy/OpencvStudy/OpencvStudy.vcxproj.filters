@@ -13,6 +13,9 @@
     <Filter Include="OpencvSource">
       <UniqueIdentifier>{063273ca-d26d-4f2a-89f6-de0e79d63863}</UniqueIdentifier>
     </Filter>
+    <Filter Include="FeatureCode">
+      <UniqueIdentifier>{c1113e2c-8466-4a45-b474-dc1918146221}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp">
@@ -71,6 +74,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp">
       <Filter>OpencvSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp">
+      <Filter>FeatureCode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

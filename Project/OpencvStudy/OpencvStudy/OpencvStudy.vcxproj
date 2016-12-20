@@ -39,8 +39,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>E:\opencvStudy;D:\opencv\build\include\opencv2;D:\opencv\build\include\opencv;D:\opencv\build\include;$(IncludePath)</IncludePath>
+    <IncludePath>D:\opencvStudy;D:\opencv\build\include\opencv2;D:\opencv\build\include\opencv;D:\opencv\build\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\opencv\build\x86\vc12\lib;$(LibraryPath)</LibraryPath>
+    <EmbedManifest>false</EmbedManifest>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -81,6 +82,7 @@
     <ClCompile Include="..\..\..\C++Source\classTest.cpp" />
     <ClCompile Include="..\..\..\C++Source\FunPointer.cpp" />
     <ClCompile Include="..\..\..\C++Source\TemplateDef.cpp" />
+    <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\codeTest.cpp" />
