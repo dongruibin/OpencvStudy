@@ -26,7 +26,10 @@
 //#define USE_FACE_DECT 1
 //#define USE_HARRIS 1
 
-#define USE_SURFTEST 1
+//#define USE_SURFTEST 1
+
+//#define USE_BASEDATA 1
+#define USE_CONST 1
 
 //#define USE_SEX_DECT 1
 
@@ -48,6 +51,14 @@
 
 
 
+*/
+
+
+//////////快捷键说明////
+/*
+	1、快速设置断点 F9
+	2、快速编译进入调试 F5
+	3、逐语句F11 逐过程 F10 跳出shift+F11
 */
 
 #endif

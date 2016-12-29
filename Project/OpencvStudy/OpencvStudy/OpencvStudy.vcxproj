@@ -80,11 +80,13 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp" />
     <ClCompile Include="..\..\..\C++Source\classTest.cpp" />
+    <ClCompile Include="..\..\..\C++Source\ConstTest.cpp" />
     <ClCompile Include="..\..\..\C++Source\FunPointer.cpp" />
     <ClCompile Include="..\..\..\C++Source\TemplateDef.cpp" />
     <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp" />
+    <ClCompile Include="..\..\..\OpencvStudy\BaseData.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\codeTest.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\DisplayImage.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\faceDect.cpp" />

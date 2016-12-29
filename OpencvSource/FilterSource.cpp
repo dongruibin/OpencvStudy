@@ -5,7 +5,9 @@ using namespace std;
 using namespace cv;//这个命名空间在#include<opencv2/opencv.hpp>里面
 
 
-//////本文件分析的是源码的实现，为保证工程编译正常，函数名字加下划线。
+//////本文件分析的是源码的实现，为保证工程编译正常，函数名字加下划线，并且加上命名空间
+namespace dong
+{
 
 //boxFilter()函数，在modules/imgproc/src/smooth.cpp
 
@@ -46,3 +48,5 @@ void _boxFilter(InputArray _src,OutputArray _dst,int ddepth,Size ksize,Point anc
 	*/
 #endif
 }
+
+}//在命名空间dong内部
