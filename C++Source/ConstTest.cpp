@@ -23,7 +23,7 @@ private:
 };
 #ifdef USE_CONST
 
-const Text a;
+const Text a;//const类型的对象
 int main(int argc,char** argv)
 {
 

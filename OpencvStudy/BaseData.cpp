@@ -41,7 +41,7 @@ Point getCenterPoint(Rect rect)
 	Point cpt;
 	cpt.x=rect.x+cvRound(rect.width/2.0);
 	cpt.y=rect.y+cvRound(rect.height/2.0);
-	return cpt
+	return cpt;
 }
 
 	//
