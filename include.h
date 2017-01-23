@@ -29,7 +29,9 @@
 //#define USE_SURFTEST 1
 
 //#define USE_BASEDATA 1
-#define USE_CONST 1
+//#define USE_CONST 1
+#define USE_OPERATOR 1
+
 
 //#define USE_SEX_DECT 1
 

@@ -84,6 +84,9 @@
     <ClCompile Include="..\..\..\C++Source\ConstTest.cpp">
       <Filter>C++Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\operatorStudy.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include.h">
