@@ -16,6 +16,9 @@
     <Filter Include="FeatureCode">
       <UniqueIdentifier>{c1113e2c-8466-4a45-b474-dc1918146221}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ImagePro">
+      <UniqueIdentifier>{4c4f5c22-9fd5-4dd2-9af9-522b29a560f7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp">
@@ -86,6 +89,12 @@
     </ClCompile>
     <ClCompile Include="..\..\..\C++Source\operatorStudy.cpp">
       <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp">
+      <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp">
+      <Filter>ImagePro</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

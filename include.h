@@ -30,7 +30,11 @@
 
 //#define USE_BASEDATA 1
 //#define USE_CONST 1
-#define USE_OPERATOR 1
+//#define USE_OPERATOR 1
+
+//Í¼Ïñ´¦Àí
+//#define LOCATION 1
+#define ANSWER 1
 
 
 //#define USE_SEX_DECT 1

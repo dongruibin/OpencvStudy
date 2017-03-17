@@ -85,6 +85,8 @@
     <ClCompile Include="..\..\..\C++Source\operatorStudy.cpp" />
     <ClCompile Include="..\..\..\C++Source\TemplateDef.cpp" />
     <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp" />
+    <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp" />
+    <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\BaseData.cpp" />
