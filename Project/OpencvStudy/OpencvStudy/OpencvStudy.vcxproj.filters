@@ -19,6 +19,9 @@
     <Filter Include="ImagePro">
       <UniqueIdentifier>{4c4f5c22-9fd5-4dd2-9af9-522b29a560f7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DesignModel">
+      <UniqueIdentifier>{b18acc75-c6fe-449e-98c4-9c1a84727277}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp">
@@ -95,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp">
       <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DesignModel\Singleton.cpp">
+      <Filter>DesignModel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
