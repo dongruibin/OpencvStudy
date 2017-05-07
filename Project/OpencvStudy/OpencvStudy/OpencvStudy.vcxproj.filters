@@ -99,8 +99,13 @@
     <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp">
       <Filter>ImagePro</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="..\..\..\DesignModel\Singleton.cpp">
       <Filter>DesignModel</Filter>
+=======
+    <ClCompile Include="..\..\..\C++Source\CharCode.cpp">
+      <Filter>C++Source</Filter>
+>>>>>>> a7d44e1ea47a8992fbd5e6fd07e0410ed7756848
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

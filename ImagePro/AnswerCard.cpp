@@ -1,4 +1,5 @@
 #include"include.h"
+#include<iostream>
 #include<opencv2\opencv.hpp>
 
 //本例程使用答题卡识别作为参考实例
@@ -20,7 +21,11 @@ using namespace cv;
 
 int main(int argc,char** argv)
 {
-
+	Mat src;
+	src=imread("D:\\4.jpg");
+	imshow("Test",src);
+	cout<<"This program is ok!"<<endl;
+	waitKey(6000);
 	return 0;
 }
 

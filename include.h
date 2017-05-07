@@ -34,7 +34,7 @@
 
 //Í¼Ïñ´¦Àí
 //#define LOCATION 1
-#define ANSWER 1
+//#define ANSWER 1
 
 
 //#define USE_SEX_DECT 1
