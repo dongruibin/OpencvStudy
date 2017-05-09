@@ -6,13 +6,15 @@
 
 //练习使用char数组等
 //字符拷贝
+//传入的是地址，传出的也是地址
 char* myStrcat(char *strDes,const char *strSrc)//mu
 {
+		char* address=strDes;
 	assert((strDes!=NULL)&&(strSrc!=NULL));//断言一下传入参数是否为空
-	char* address=strDes;
-	while(*strDes!='/0')
-		++strDes;
-	while((*strDes++=*strSrc++)!='/0')
+
+	while(*strDes!='\0')//重大失误，确认好是'\0'还是'/0'(前者)
+		strDes++;
+	while((*strDes++= *strSrc++)!='\0')
 		NULL;
 	return address;
 }
