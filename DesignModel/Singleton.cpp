@@ -5,7 +5,7 @@ using namespace std;
 //说明：单例模式的使用
 
 
-#if 1
+#if 0
 class singleton
 {
 
