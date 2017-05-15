@@ -1,34 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="C++Source">
-      <UniqueIdentifier>{65452894-c158-433b-bca8-7f9cafe0878b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="OpencvStudy">
-      <UniqueIdentifier>{0d8cffba-5a31-4951-aa1c-cc98825917d8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header">
-      <UniqueIdentifier>{16b52521-0caf-4da7-9ad5-b6db9a455062}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="OpencvSource">
-      <UniqueIdentifier>{063273ca-d26d-4f2a-89f6-de0e79d63863}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="FeatureCode">
-      <UniqueIdentifier>{c1113e2c-8466-4a45-b474-dc1918146221}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ImagePro">
-      <UniqueIdentifier>{4c4f5c22-9fd5-4dd2-9af9-522b29a560f7}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\..\C++Source\ArrayPoint.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\CharCode.cpp">
       <Filter>C++Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\C++Source\classTest.cpp">
       <Filter>C++Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\ConstTest.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\FunPointer.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\C++Source\operatorStudy.cpp">
+      <Filter>C++Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\..\C++Source\TemplateDef.cpp">
       <Filter>C++Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DesignModel\Singleton.cpp">
+      <Filter>DesignModel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\SurfTest.cpp">
+      <Filter>FeatureCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp">
+      <Filter>FeatureCode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp">
+      <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp">
+      <Filter>ImagePro</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp">
+      <Filter>OpencvSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp">
+      <Filter>OpencvSource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\BaseData.cpp">
+      <Filter>OpencvStudy</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\OpencvStudy\codeTest.cpp">
       <Filter>OpencvStudy</Filter>
@@ -37,6 +53,9 @@
       <Filter>OpencvStudy</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\OpencvStudy\faceDect.cpp">
+      <Filter>OpencvStudy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\OpencvStudy\WayToAccessPixel.cpp">
       <Filter>OpencvStudy</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\OpencvStudy\FaceRecognize.cpp">
@@ -60,45 +79,32 @@
     <ClCompile Include="..\..\..\OpencvStudy\SexDect.cpp">
       <Filter>OpencvStudy</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\OpencvStudy\SurfTest.cpp">
-      <Filter>OpencvStudy</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\OpencvStudy\VectorTest.cpp">
       <Filter>OpencvStudy</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\OpencvStudy\WayToAccessPixel.cpp">
-      <Filter>OpencvStudy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\C++Source\FunPointer.cpp">
-      <Filter>C++Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp">
-      <Filter>OpencvSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp">
-      <Filter>OpencvSource</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp">
-      <Filter>FeatureCode</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\OpencvStudy\BaseData.cpp">
-      <Filter>OpencvStudy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\C++Source\ConstTest.cpp">
-      <Filter>C++Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\C++Source\operatorStudy.cpp">
-      <Filter>C++Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp">
-      <Filter>ImagePro</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp">
-      <Filter>ImagePro</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\C++Source\CharCode.cpp">
-      <Filter>C++Source</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="C++Source">
+      <UniqueIdentifier>{358fc1c6-592c-4f1f-9170-395c2703ac5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DesignModel">
+      <UniqueIdentifier>{a4e72ad5-0f54-4f8c-9a77-67e26d81ca09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FeatureCode">
+      <UniqueIdentifier>{a1538bc5-a289-4ecf-a009-5d527df2e173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImagePro">
+      <UniqueIdentifier>{34c253e6-2dad-41c3-8906-597f9d455845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpencvSource">
+      <UniqueIdentifier>{e0850027-4abd-45f8-bfb2-3f51973605b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpencvStudy">
+      <UniqueIdentifier>{22969dd8-85d5-4b35-a2f5-48cd8e095684}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{a7399a11-e09a-443f-83e6-967e82fe8198}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include.h">
