@@ -2,7 +2,7 @@
 #include<assert.h>
 #include<include.h>
 
-#define CHARUSE 1
+//#define CHARUSE 1
 
 //练习使用char数组等
 //字符拷贝

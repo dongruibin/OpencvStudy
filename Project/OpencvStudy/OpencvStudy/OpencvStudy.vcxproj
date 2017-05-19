@@ -105,6 +105,8 @@
     <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp" />
     <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp" />
     <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp" />
+    <ClCompile Include="..\..\..\ObjectDect\MultipleImageWindow.cpp" />
+    <ClCompile Include="..\..\..\ObjectDect\ObjectDect.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterSource.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\BaseData.cpp" />
