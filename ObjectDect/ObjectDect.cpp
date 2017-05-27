@@ -12,6 +12,8 @@
 //3、二值化
 #define ObjectDectUse 1
 using namespace cv;
+
+Mat calculateLightPattern(Mat _img);
 //opencv command line parser functions
 //keys accecpted by command line parser
 const char* keys=
@@ -49,7 +51,7 @@ return aux;
 }
 
 
-
+void MymediaBlur(InputArray _src0,OutputArray _dst,int ksize);//It cann't use
 
 #ifdef ObjectDectUse
 
@@ -61,14 +63,63 @@ int main(int argc,char** argv)
 	std::cout<<"This project is belong to ObjectDect.cpp file!"<<std::endl;
 	//There the program is starting
 	CommandLineParser parser(argc,argv,keys);
-	file=parser.get<string>("file");
-	cout<<"The Param file is:"<<file<<endl;
+	//file=parser.get<string>("file");
+	//cout<<"The Param file is:"<<file<<endl;
 	//parser.about("Chapter 5. PhotoTool v1.0.0");
 	//if(parser.has("help"))
 	//{
 	//	parser.printParams();
 	//	return 0;
 	//}
+	cout<<"This is parser is passing!"<<endl;
+	//read the image
+	//Mat img=imread("D:\\OpencvStudy\\img\\timg.jpg");//remember the format of  image path 
+	Mat img=imread("D:\\OpencvStudy\\img\\blackU.jpg");
+	imshow("timg.jpg",img);
+	Mat img_noise,img_box_smooth;
+	medianBlur(img,img_noise,3);//This function is locate smooth.cpp
+	//imshow("img_noise",img);
+	//blur处理
+	blur(img,img_box_smooth,Size(3,3));
+	//imshow("img_box_smooth",img_box_smooth);
+	//load back(no light) image 
+	Mat img_no_light;
+	img_noise.copyTo(img_no_light);
+	//Mat light_pattern=imread("D:\\OpencvStudy\\img\\back.jpg");
+	//Mat lightBack=imread("D:\\OpencvStudy\\img\\blackWhite.jpg");
+	Mat lightBack=calculateLightPattern(img);
+	//img_no_light=removeLight(img_noise,img,2);
+	img_no_light=removeLight(img,lightBack,1);
+	imshow("img_no_light",img_no_light);
+	Mat img_thr;
+	threshold(img_no_light, img_thr, 30, 255, THRESH_BINARY);
+	//imshow("img_thr",img_thr);
+
+	//medianBlur(light_pattern,light_pattern,3);
+	cv::waitKey(600000);
 	return 0;
 }
 #endif
+//MediaBlur function 
+//MediaBlur 是典型非线性滤波技术，用像素点领域灰度值的中值来代替该像素
+//点的灰度值，主要是去除脉冲噪声、椒盐噪声（怎么区分的？）时有能保留图像边缘细节
+void MymediaBlur(InputArray _src0,OutputArray _dst,int ksize)
+{
+	Mat src0=_src0.getMat();
+	_dst.create(_src0.size(),_src0.type());
+	Mat dst=_dst.getMat();
+	if(ksize<=-1)
+	{
+		src0.copyTo(dst);
+	}
+	CV_Assert(ksize%2==1);//If there is even number,it will be assert failed
+	//There need odd number,we will sort the ksize X ksize first.
+	bool useSortNet=ksize==3||(ksize==5);
+}
+Mat calculateLightPattern(Mat _img)
+{
+	Mat pattern;
+	blur(_img,pattern,Size(_img.cols/3,_img.cols/3));
+	//imshow("calculateLightPattern",pattern);
+	return pattern;
+}
