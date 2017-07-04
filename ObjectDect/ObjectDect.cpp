@@ -10,7 +10,7 @@
 //1、去噪
 //2、去除光亮
 //3、二值化
-#define ObjectDectUse 1
+#define ObjectDectUse 0
 using namespace cv;
 
 Mat calculateLightPattern(Mat _img);
@@ -59,6 +59,7 @@ int main(int argc,char** argv)
 {
 	string s="This is a big";
 	string file;
+	int fsm;
 	//MultipleImageWindow multipleImageWindow(s,1200,700,1);
 	std::cout<<"This project is belong to ObjectDect.cpp file!"<<std::endl;
 	//There the program is starting
@@ -97,6 +98,28 @@ int main(int argc,char** argv)
 
 	//medianBlur(light_pattern,light_pattern,3);
 	cv::waitKey(600000);
+#ifdef DEBUG
+	////test switch case
+	while(1)
+	{
+	cout<<"please input the fsm:"<<endl;
+	//cin>>fsm;
+	fsm=0;
+	switch(fsm)
+	{
+	case 0:
+		cout<<"This is 0"<<endl;
+		break;
+	case 1:
+		cout<<"This is 1"<<endl;
+		break;
+	default :
+		cout<<"This is default"<<endl;
+		break;
+	}
+	cout<<"this is beside the switch"<<endl;
+	}
+#endif
 	return 0;
 }
 #endif
