@@ -2,6 +2,7 @@
 #include"MultipleImageWindow.h"
 //#include "utility.hpp"//what is the function of utility.hpp
 //#include"opencv2/core/utility.hpp"
+#include"include.h"
 
 //本文件主要练习物体检测
 //1、熟悉一下预处理作用
@@ -10,7 +11,7 @@
 //1、去噪
 //2、去除光亮
 //3、二值化
-#define ObjectDectUse 0
+
 using namespace cv;
 
 Mat calculateLightPattern(Mat _img);

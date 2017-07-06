@@ -105,6 +105,7 @@
     <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp" />
     <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp" />
     <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp" />
+    <ClCompile Include="..\..\..\LinkList\linklist.cpp" />
     <ClCompile Include="..\..\..\ObjectDect\MultipleImageWindow.cpp" />
     <ClCompile Include="..\..\..\ObjectDect\ObjectDect.cpp" />
     <ClCompile Include="..\..\..\OpencvSource\FilterEngineSource.cpp" />
@@ -126,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include.h" />
+    <ClInclude Include="..\..\..\LinkList\linklist.h" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -1,6 +1,9 @@
 //linklist.h:定义链表结点和方法
+//参考地址：http://blog.csdn.net/kevin_zhai/article/details/50494020
 #include<string>
+#include<include.h>
 using namespace std;
+
 
 struct Info
 {
