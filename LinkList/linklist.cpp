@@ -45,11 +45,12 @@
 #ifdef USE_LinkList
 int main(int argc,char** argv)
 {
-	cout<<"This is a demo of linkList !"<<endl;
+	//cout<<"This is a demo of linkList !"<<endl;
+
+
 	while(1)
 	{
 	}
-
 	return 0;
 }
 #endif

@@ -11,12 +11,13 @@ struct Info
 	int id;
 };
 //define list
-//这个就是结点 
+//这个就是结点
+/*
 struct Node
 {
-	Info val;//信息部分
-	Node* next;//地址部分
-	Node(Info x):val(x),next(NULL){}//直接带构造方法
+	//struct Info val;//信息部分
+	//Node* next;//地址部分
+	//Node(Info x):val(x),next(NULL){}//直接带构造方法
 };
 
 class LinkList
@@ -36,3 +37,4 @@ private:
 	Node* head;//指向结点的指针
 	int length;//整个链表的长度
 };
+*/
