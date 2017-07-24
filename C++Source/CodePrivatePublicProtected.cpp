@@ -82,7 +82,7 @@ string arr[]={"dong1","dong2","dong3","dong4","dong5","dong6"};
 string ar="I am a test string";
 vector<string> vecstring(arr,arr+3);
 vector<int> vec(10),veca(10),vecb(10),vecd(12);
-vector<vector<int>>  vecc(3);//一个vector里面有3个vector<int>
+vector< vector<int> >  vecc(3);//一个vector里面有3个vector<int>
 int main(int argc,char** argv)
 {
 	cout<<"This program is test the private pulic protected"<<endl;
@@ -94,6 +94,18 @@ int main(int argc,char** argv)
 	{
 		vec[i]=i;
 	}
+	veca.push_back(10);
+	veca.push_back(12);
+	for(int i=0;i<100;i++)
+	{
+		//vecd[i]=i;
+		vecd.push_back(i);
+	}
+	cout<<"vecd size:"<<vecd.size()<<endl;//第一次初始化就给了12个数
+	for(vector<int>::iterator vecdbegin=vecd.begin(),vecdend=vecd.end();vecdbegin!=vecdend;vecdbegin++)
+	{
+		cout<<"vecd data is"<<*vecdbegin<<endl;
+	}
 	for(vector<int>::iterator vecbegain=vec.begin(),vecend=vec.end();vecbegain!=vecend;vecbegain++)
 	{//iterator 是不是就是指向元素的指针？
 		cout<<"This is the data:"<<*vecbegain<<endl;
@@ -104,6 +116,8 @@ int main(int argc,char** argv)
 	{
 		cout<<"This is the string:"<<*vbegin<<endl;
 	}
+	vecc.push_back(veca);//是一个二维的vector
+	//cout<<"vecc里面的"<<vecc[3].v
 
 	////////////////////
 	cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"<<endl;
