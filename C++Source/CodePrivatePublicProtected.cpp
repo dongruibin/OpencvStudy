@@ -74,6 +74,24 @@ class BaseProtected: protected Base
 
 };
 //private construct
+//备注说明：
+//当构造函数为private时，当我们在程序中声明一个对象时，
+//	编译器为调用构造函数（如果有的话），而这个调用将通常是
+//外部的，也就是说它不属于class对象本身的调用，假如构造
+//函数是私有的，由于在class外部不允许访问私有成员，所有这将导致
+//编译出错。然而，对于class本身，可以利用它的static公有成员，因为
+//它们独立于class对象之外，不必产生对象也可以使用它们。
+/*
+	因此因为构造函数被class私有化，所以我们要创建出对象，就必须能够访问到
+	class的私有域，这一点只有class的成员可以做到，但是我们创建出其对象之前
+	怎么能利用它的成员？
+	static公有成员，它是独立于class对象而存在的，“我们”可以访问得到。假如
+	在某个static函数中创建了该class的对象，并以引用或者指针的形式将其返回（
+	这里不以对象返回，主要是构造函数是私有的，外部不能创建临时对象），就
+	获得这个对象的使用权。
+	http://blog.csdn.net/koudaidai/article/details/7546661
+
+*/
 class PrivateClass
 {
 private:
