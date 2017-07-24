@@ -42,6 +42,7 @@ void Base::ChangeMember()
 
 }
 
+
 //private implement
 class BasePrivate:private Base
 {
@@ -72,7 +73,17 @@ class BaseProtected: protected Base
 {
 
 };
-
+//private construct
+class PrivateClass
+{
+private:
+	PrivateClass(){
+	}
+public:
+	void printt(){
+		cout<<"This is only a test!"<<endl;
+	}
+};
 
 ////main founction
 #ifdef USE_3P
@@ -83,6 +94,8 @@ string ar="I am a test string";
 vector<string> vecstring(arr,arr+3);
 vector<int> vec(10),veca(10),vecb(10),vecd(12);
 vector< vector<int> >  vecc(3);//一个vector里面有3个vector<int>
+//private construct
+//PrivateClass privateClass;//构造函数不可以使用
 int main(int argc,char** argv)
 {
 	cout<<"This program is test the private pulic protected"<<endl;
