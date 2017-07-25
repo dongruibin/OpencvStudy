@@ -17,6 +17,15 @@ protected:
 	int a2;
 public:
 	int a3;
+public:
+	static int f;
+	friend void addSum(Base& obj)
+	{
+		f+=obj.f;
+		//a1=a1*obj.a1;//无法使用，提示对非静态成员
+		//cout<<"private data a1*a1 is:"<<a1<<endl;
+		cout<<"This friend function:"<<f<<endl;
+	}
 };//always forget
 
 Base::Base():a2(5),a1(5),a3(5)//,a(5)---静态类数据无法通过构造函数初始化---理由是什么？
@@ -39,7 +48,6 @@ void Base::ChangeMember()
 	//静态成员函数属于整个类，在实例化对象之前就已经分配空间了，
 	//而类的非静态成员必须在类实例化对象后才有内存空间。
 	
-
 }
 
 
@@ -94,8 +102,9 @@ class BaseProtected: protected Base
 */
 class PrivateClass
 {
-private:
+private://私有构造
 	PrivateClass(){
+		cout<<"This is a private construct"<<endl;
 	}
 public:
 	void printt(){
@@ -112,8 +121,12 @@ string ar="I am a test string";
 vector<string> vecstring(arr,arr+3);
 vector<int> vec(10),veca(10),vecb(10),vecd(12);
 vector< vector<int> >  vecc(3);//一个vector里面有3个vector<int>
+vector< vector<int> > martix(2,vector<int>(3));//2行，3列
 //private construct
 //PrivateClass privateClass;//构造函数不可以使用
+//初始化Base类里面的静态成员
+int Base::f=3;
+Base base;
 int main(int argc,char** argv)
 {
 	cout<<"This program is test the private pulic protected"<<endl;
@@ -147,10 +160,18 @@ int main(int argc,char** argv)
 	{
 		cout<<"This is the string:"<<*vbegin<<endl;
 	}
-	vecc.push_back(veca);//是一个二维的vector
+	cout<<"<<<<<<<<<<<<Use vecc<<<<<<<<<"<<endl;
+	vecc.push_back(veca);//是一个二维的vector,这是第四个参数
 	//cout<<"vecc里面的"<<vecc[3].v
+	cout<<"二维vector ：vecc is :"<<vecc[3][0]<<endl;
+	//cout<<"二维vector：第一个元素"<<(*vecc[3])[0]<<endl;
+	cout<<"This chapter the vector is not clearly"<<endl;
+	cout<<"ERROR! ERROR!"<<endl;
 
 	////////////////////
+	cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"<<endl;
+	cout<<"<<<<<<<<<<<<<<Friend function test<<<<<<<<<<<"<<endl;
+	addSum(base);
 	cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"<<endl;
 	BasePrivate basePrivate;//创建继承对象，原来的父类对象构造方法一样会调用
 	BasePublic basePublic;
