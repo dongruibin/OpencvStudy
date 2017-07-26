@@ -58,6 +58,13 @@ void MymediaBlur(InputArray _src0,OutputArray _dst,int ksize);//It cann't use
 
 int main(int argc,char** argv)
 {
+	//早期的图片
+	IplImage *image;
+	Mat mat;//这个就是类，对象
+	//Mat convert to IplImage
+	image=&IplImage(mat);
+
+	cout<<"This a demo test ocr"<<endl;
 	string s="This is a big";
 	string file;
 	int fsm;

@@ -13,12 +13,14 @@ public:
 private:
 	int a1;
 	static int a;//静态 私有变量。
+	static int k2;//验证静态成员，私有与公有是否有区别
 protected:
 	int a2;
 public:
 	int a3;
 public:
 	static int f;
+	static int k1;
 	friend void addSum(Base& obj)
 	{
 		f+=obj.f;
@@ -40,6 +42,7 @@ void Base::PrintInfo()
 	cout<<"a2 is :"<<a2<<endl;
 	cout<<"a3 is :"<<a3<<endl;
 	//Base::a=4;
+	cout<<"Base 类静态私有成员k2："<<k2<<endl;
 }
 void Base::ChangeMember()
 {
@@ -111,9 +114,17 @@ public:
 		cout<<"This is only a test!"<<endl;
 	}
 };
+//静态成员函数和成员总结：
+/*
+	1、静态成员函数不能调用非静态成员
+	2、非静态成员函数中可以调用静态成员，因为静态成员属于类本身，
+		在类的对象产生之前就已经存在了，所以在非静态成员函数可以
+		调用静态成员
+	3、静态成员变量使用前必须初始化（int myClass::m_nNumber=0;）,
+		否则会在linker时出错。
+	参考：http://blog.csdn.net/morewindows/article/details/6721430/
+*/
 
-////main founction
-#ifdef USE_3P
 int  Base::a=5;//a是静态变量，要在类体外进行定义，构造方法是不可以的
 //理由：
 string arr[]={"dong1","dong2","dong3","dong4","dong5","dong6"};
@@ -126,7 +137,16 @@ vector< vector<int> > martix(2,vector<int>(3));//2行，3列
 //PrivateClass privateClass;//构造函数不可以使用
 //初始化Base类里面的静态成员
 int Base::f=3;
-Base base;
+
+//验证都是静态变量前提下，公有和私有是否有区别
+int Base::k1=3;//这是静态公有
+int Base::k2=33;//这是静态私有
+//Base k;//为什么声明（应该叫定义）对象也会调用构造函数
+Base *k;//这样是不调用构造函数的是，在32位机上
+	//一个指针占4个字节
+////main founction
+#ifdef USE_3P
+Base base,base1;//这里声明（应该叫定义）一下Base对象为什么会调用构造方法
 int main(int argc,char** argv)
 {
 	cout<<"This program is test the private pulic protected"<<endl;
@@ -173,6 +193,15 @@ int main(int argc,char** argv)
 	cout<<"<<<<<<<<<<<<<<Friend function test<<<<<<<<<<<"<<endl;
 	addSum(base);
 	cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"<<endl;
+	///////////
+	cout<<"验证都是静态变量前提下，公有和私有是否有区别"<<endl;
+	cout<<"静态公有变量k1："<<base.k1<<endl;//静态使用类名调和对象调一样
+	cout<<"静态公有变量k1：类名调用"<<Base::k1<<endl;
+	//cout<<"静态私有变量k2："<<base.k2<<endl;//错误，是无法访问的
+	//cout<<"静态私有变量k2：类名调用"<<Base::k2<<endl;
+	base.PrintInfo();
+	base1.PrintInfo();
+
 	BasePrivate basePrivate;//创建继承对象，原来的父类对象构造方法一样会调用
 	BasePublic basePublic;
 
