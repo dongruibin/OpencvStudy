@@ -36,7 +36,7 @@
 //#define LOCATION 1
 //#define ANSWER 1
 
-#define ObjectDectUse 0
+//#define ObjectDectUse 0
 
 
 //#define USE_SEX_DECT 1
@@ -46,7 +46,7 @@
 //#define USE_3P 1
 
 //测试C++内存分布在哪里
-//#define CODESTORE 1
+#define CODESTORE 1
 
 
 ///////////程序释疑说明////
