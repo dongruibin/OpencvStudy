@@ -18,6 +18,12 @@ CascadeClassifier eyes_cascade;
 int main(int argc ,char** argv)
 { 
 	Mat img = imread("D:\\5.jpg");
+	if(img.empty())
+	{
+		cout<<"img not found"<<endl;
+		return -1;
+	//imshow("原始图片",img);
+	}
 	//加载级联（cascade）
 	if (!face_cascade.load(face_cascade_name))
 	{

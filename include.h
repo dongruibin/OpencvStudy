@@ -23,7 +23,7 @@
 //#define USE_SURF_TEST 1
 
 //#define USE_MATRIXTEST 1
-//#define USE_FACE_DECT 1
+#define USE_FACE_DECT 1
 //#define USE_HARRIS 1
 
 //#define USE_SURFTEST 1
@@ -46,7 +46,10 @@
 //#define USE_3P 1
 
 //测试C++内存分布在哪里
-#define CODESTORE 1
+//#define CODESTORE 1
+
+//测试霍夫变换
+//#define HoughDemo 1
 
 
 ///////////程序释疑说明////
