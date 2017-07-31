@@ -8,8 +8,12 @@ using namespace cv;
 
 void detectAndDisplay(Mat frame);
 //*********声明全局变量
-String face_cascade_name = "haarcascade_frontalface_alt.xml";
-String eyes_cascade_name = "haarcascade_eye_tree_eyeglasses.xml";
+//这种写法加载工程目录
+//String face_cascade_name = "haarcascade_frontalface_alt.xml";
+//String eyes_cascade_name = "haarcascade_eye_tree_eyeglasses.xml";
+//加载绝对位置,注意位置是用"\\"标识出来
+String face_cascade_name = "D:\\OpencvStudy\\OpencvStudy\\haarcascade_frontalface_alt.xml";
+String eyes_cascade_name = "D:\\OpencvStudy\\OpencvStudy\\haarcascade_eye_tree_eyeglasses.xml";
 CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
 
@@ -65,9 +69,20 @@ void detectAndDisplay(Mat frame)
 	{
 		//人脸数目
 		cout<<"Face count:"<<faces.size()<<endl;
-		cout<<"Face re:"<<faces[0].area()<<endl;
-		cout<<"Face tl坐标："<<faces[0].tl()<<endl;//左上坐标
-		cout<<"Face br坐标："<<faces[0].br()<<endl;//右下坐标
+		//以下访问可能存在问题，vector里面肯能没有？
+		//指针 对象调用
+		//cout<<"Face re:"<<faces[0].area()<<endl;
+		//cout<<"Face tl坐标："<<faces[0].tl()<<endl;//左上坐标
+		//cout<<"Face br坐标："<<faces[0].br()<<endl;//右下坐标
+		cout<<"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"<<endl;
+		cout<<"All the information of faces vector:"<<endl;
+		for(vector<Rect>::iterator ibegin=faces.begin(),iend=faces.end();ibegin!=iend;ibegin++)
+		{
+			cout<<"This is vector of face"<<endl;
+			cout<<"face re is :"<<ibegin->area()<<endl;
+			cout<<"the iterator is a pointer to object!"<<endl;
+			
+		}
 
 		Point center(faces[i].x+faces[i].width/2,faces[i].y+faces[i].height/2);//得到人脸的区域
 		ellipse(frame, center, Size(faces[i].width / 2, faces[i].height / 2), 0, 0, 360, Scalar(0, 0, 255), 2, 8, 0);
