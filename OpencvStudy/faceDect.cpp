@@ -27,7 +27,7 @@ int main(int argc ,char** argv)
 	//加载级联（cascade）
 	if (!face_cascade.load(face_cascade_name))
 	{
-		printf("Error loading\n");
+		printf(" Face Error loading\n");//这个路径需要特别注意
 		return -1;
 	}
 	if (!eyes_cascade.load(eyes_cascade_name))
@@ -43,16 +43,32 @@ int main(int argc ,char** argv)
 #else
 #endif
 
+std::vector<Rect> faces;//这个变量如果是局部变量的话，会报内存错误
+/*
+主要是因为：之前局部变量faces为vector，在faces这个vector释放时，会出现
+_CrtIsValidHeapPointer的bug，这是由于detectMultiScale函数封装在opencv的
+dll中，在检测到人脸后会对face这个vector进行操作，而在该变量使用结束释放时，
+再次对其进行操作时，就会报错
+参考：http://blog.csdn.net/u014365862/article/details/49907055
+*/
 void detectAndDisplay(Mat frame)
 {
-	std::vector<Rect> faces;
+	//std::vector<Rect> faces;
 	Mat frame_gray;
 	cvtColor(frame,frame_gray,COLOR_BGR2GRAY);//变成灰度图
-	imshow("灰度效果展示",frame_gray);
+	equalizeHist(frame_gray,frame_gray);
+	//imshow("灰度效果展示",frame_gray);
 	//人脸检测
-	face_cascade.detectMultiScale(frame_gray,faces,1.1,2,0|CV_HAAR_SCALE_IMAGE,Size(30,30));
+	face_cascade.detectMultiScale(frame_gray,faces,1.1,2,0|CV_HAAR_SCALE_IMAGE,Size(30,30));//CV_HAAR_FIND_BIGGEST_OBJECT
+	//face_cascade.detectMultiScale(frame_gray,faces,1.1,2,0|CV_HAAR_FIND_BIGGEST_OBJECT,Size(30,30));
 	for (size_t i = 0; i < faces.size();i++)
 	{
+		//人脸数目
+		cout<<"Face count:"<<faces.size()<<endl;
+		cout<<"Face re:"<<faces[0].area()<<endl;
+		cout<<"Face tl坐标："<<faces[0].tl()<<endl;//左上坐标
+		cout<<"Face br坐标："<<faces[0].br()<<endl;//右下坐标
+
 		Point center(faces[i].x+faces[i].width/2,faces[i].y+faces[i].height/2);//得到人脸的区域
 		ellipse(frame, center, Size(faces[i].width / 2, faces[i].height / 2), 0, 0, 360, Scalar(0, 0, 255), 2, 8, 0);
 	}
