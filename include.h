@@ -23,7 +23,7 @@
 //#define USE_SURF_TEST 1
 
 //#define USE_MATRIXTEST 1
-#define USE_FACE_DECT 1
+//#define USE_FACE_DECT 1
 //#define USE_HARRIS 1
 
 //#define USE_SURFTEST 1
@@ -43,7 +43,7 @@
 //#define USE_LinkList 1
 
 //测试私有继承，公有继承，保护继承
-//#define USE_3P 1
+#define USE_3P 1
 
 //测试C++内存分布在哪里
 //#define CODESTORE 1

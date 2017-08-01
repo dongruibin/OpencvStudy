@@ -173,6 +173,7 @@ int main(int argc,char** argv)
 	for(vector<int>::iterator vecbegain=vec.begin(),vecend=vec.end();vecbegain!=vecend;vecbegain++)
 	{//iterator 是不是就是指向元素的指针？
 		cout<<"This is the data:"<<*vecbegain<<endl;
+		cout<<"This data address is:"<<vec
 	}
 	cout<<"test string"<<ar<<endl;//要打印string，要加入头文件#include<string>
 	//vector of string
@@ -185,6 +186,9 @@ int main(int argc,char** argv)
 	//cout<<"vecc里面的"<<vecc[3].v
 	cout<<"二维vector ：vecc is :"<<vecc[3][0]<<endl;
 	//cout<<"二维vector：第一个元素"<<(*vecc[3])[0]<<endl;
+	//明确下指针 普通对象使用
+	cout<<"使用类似迭代方式："<<endl;
+	//cout<<"vector 访问："<<vecc[3]->v<<endl;
 	cout<<"This chapter the vector is not clearly"<<endl;
 	cout<<"ERROR! ERROR!"<<endl;
 
