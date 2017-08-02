@@ -55,6 +55,10 @@ int main(int argc,char** argv)
 }
 
 vector<string> names;
+/*
+使用霍夫变换检测图像中的直线，圆等图形是利用图形函数
+从直角坐标系到极坐标系。
+*/
 void standHough(int ,void *)
 {
 	//cout<<"This is only a test"<<endl;
