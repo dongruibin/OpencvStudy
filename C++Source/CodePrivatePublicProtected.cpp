@@ -173,7 +173,7 @@ int main(int argc,char** argv)
 	for(vector<int>::iterator vecbegain=vec.begin(),vecend=vec.end();vecbegain!=vecend;vecbegain++)
 	{//iterator 是不是就是指向元素的指针？
 		cout<<"This is the data:"<<*vecbegain<<endl;
-		cout<<"This data address is:"<<vec
+		cout<<"This data address is:"<<&vecbegain<<endl;
 	}
 	cout<<"test string"<<ar<<endl;//要打印string，要加入头文件#include<string>
 	//vector of string

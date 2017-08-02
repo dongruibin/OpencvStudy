@@ -54,6 +54,7 @@ int main(int argc,char** argv)
 	return 0;
 }
 
+vector<string> names;
 void standHough(int ,void *)
 {
 	//cout<<"This is only a test"<<endl;
