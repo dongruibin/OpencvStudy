@@ -30,6 +30,7 @@ public:
 	}
 };//always forget
 
+
 Base::Base():a2(5),a1(5),a3(5)//,a(5)---静态类数据无法通过构造函数初始化---理由是什么？
 	//---静态数据时全局的？调用可以使用类名，也可以使用类对象？
 {
@@ -113,6 +114,22 @@ public:
 	void printt(){
 		cout<<"This is only a test!"<<endl;
 	}
+};
+//添加多继承的学习
+class Base1
+{
+private:
+	//a=5;//还是没有搞清这个问题，
+	//上面的报错信息是：只有静态常量
+	//整型数据成员才可以在类中初始化
+	//int a=5;//一样提示错误
+public:
+	//int a=5;//与上面提示是一样的
+public:
+	Base1(){
+		cout<<"This a the Base1!"<<endl;
+	}
+
 };
 //静态成员函数和成员总结：
 /*
