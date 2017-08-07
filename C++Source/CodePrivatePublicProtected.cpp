@@ -131,6 +131,24 @@ public:
 	}
 
 };
+//new class2
+class Base2
+{
+public:
+	Base2(){cout<<"This construct is Base2!"<<endl;}
+	int  Base2Value(){return aa2;}
+	void Base2Set(int _aa2){aa2=_aa2;}
+private:
+	int aa2;
+};
+//多继承使用
+class BaseMulti:public Base1,public Base2
+{
+public:
+	BaseMulti(){}
+	
+};
+
 //静态成员函数和成员总结：
 /*
 	1、静态成员函数不能调用非静态成员
@@ -162,8 +180,11 @@ int Base::k2=33;//这是静态私有
 Base *k;//这样是不调用构造函数的是，在32位机上
 	//一个指针占4个字节
 ////main founction
+
 #ifdef USE_3P
+BaseMulti baseMulti;//这里会调用继承的父类的构造方法
 Base base,base1;//这里声明（应该叫定义）一下Base对象为什么会调用构造方法
+//test multi extend
 int main(int argc,char** argv)
 {
 	cout<<"This program is test the private pulic protected"<<endl;
