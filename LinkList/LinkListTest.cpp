@@ -11,10 +11,10 @@ using namespace std;
 */
 struct Info
 {
-	string name;
+	string name;//区分一下 char* name??
 	int id;
 };
-struct Node
+struct Node//这个就是链表节点
 {
 	Info val;//信息部分
 	Node* next;//地址部分
@@ -36,6 +36,19 @@ private:
 	Node* head;//链表里面的头？
 	int length;//整个链表的长度
 };
+//construct of 
+LinkList::LinkList()
+{
+	cout<<"This is the construct of LinkList."<<endl;
+	head=NULL;
+	length=0;
+
+}
+//
+LinkList::~LinkList()
+{
+	
+}
 //@param 
 void LinkList::Insert(Info val,int pos)
 {
@@ -71,10 +84,33 @@ void LinkList::Insert(Info val,int pos)
 	temp->next=node;
 	length++;
 }
+//链表打印
+void LinkList::Print()
+{
 
+}
 #ifdef USE_LinkList
+/*
+链表就是存数据和指向下一个节点的指针
+*/
+LinkList linkList;
+Info bob;//,alice;
+//struct Info many;
+//Info many;
+
 int main(int argc,char** argv)
 {
 	cout<<"This is a LinkList test demo"<<endl;
+	cout<<"This is demo of struct init."<<endl;
+	//结构体参考：http://blog.csdn.net/github_26672553/article/details/50382188
+	//1、结构体初始化
+	bob.name="bob";
+	bob.id=79;
+	//2、定义在初始化（前面已经定义[没有试成功]）
+	struct Info alice={"alice",80};
+	//3、使用指定数据赋值给指定属性
+	//struct Info many={ .name="many"; .id=81};//注意这是c语言？
+	//struct Info many={name:"many",id:81};
+
 }
 #endif
