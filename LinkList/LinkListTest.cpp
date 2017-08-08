@@ -109,8 +109,14 @@ int main(int argc,char** argv)
 	//2、定义在初始化（前面已经定义[没有试成功]）
 	struct Info alice={"alice",80};
 	//3、使用指定数据赋值给指定属性
-	//struct Info many={ .name="many"; .id=81};//注意这是c语言？
+	//struct Info many={ .name="many"; .id=81};//注意这是c语言？c++也通用？
 	//struct Info many={name:"many",id:81};
+	//struct Info jine={name:"",id:82};
+
+	//<<<<<<<<<<<<<<<<<<<<<<<<
+	cout<<"sizeof the struct or Info:"<<sizeof(Info)<<endl;
+	cout<<"sizeof the object of Info:"<<sizeof(alice)<<endl;
+
 
 }
 #endif
