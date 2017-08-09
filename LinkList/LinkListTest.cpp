@@ -33,7 +33,7 @@ public:
 	void Print();//打印链表
 	~LinkList();
 private:
-	Node* head;//链表里面的头？
+	Node* head;//链表里面的头？第一节点？
 	int length;//整个链表的长度
 };
 //construct of 
@@ -53,29 +53,30 @@ LinkList::~LinkList()
 void LinkList::Insert(Info val,int pos)
 {
 	cout<<"LinkList Insert"<<endl;
-	if(pos<0)
+	if(pos<0)//位置不存在
 	{
 		cout<<"pos must be greater than zero"<<endl;
 		return;
 	}
 	int index=1;
-	Node *temp=head;//指向节点的指针
+	Node *temp=head;//指向节点的指针，先让temp指向第一个节点
 	Node *node=new Node(val);//调用有参构造，构造节点，也就是将要
 	//插入数据变成节点形式
 	if(pos==0)
 	{
-		node->next=temp;//这里还不是赋值，是让指针指向头
-		head=node;
+		//这里没有搞明白。关键
+		node->next=temp;//要插入的node节点的指针，指向下一个节点
+		head=node;//将当前添加的node变成头节点
 		length++;
 		return;
 	}
-	while(temp!=NULL&&index<pos)
+	while(temp!=NULL&&index<pos)//原来链表就有数据，先将temp指到头
 	{
 		temp=temp->next;
 		index++;
 
 	}
-	if(temp==NULL)
+	if(temp==NULL)//链表头就是空的
 	{
 		cout<<"Insert failed"<<endl;
 		return;
@@ -87,6 +88,7 @@ void LinkList::Insert(Info val,int pos)
 //链表打印
 void LinkList::Print()
 {
+	//如何把节点一个一个打印出来
 
 }
 #ifdef USE_LinkList
@@ -97,6 +99,7 @@ LinkList linkList;
 Info bob;//,alice;
 //struct Info many;
 //Info many;
+//结构体初始化
 
 int main(int argc,char** argv)
 {
@@ -116,6 +119,10 @@ int main(int argc,char** argv)
 	//<<<<<<<<<<<<<<<<<<<<<<<<
 	cout<<"sizeof the struct or Info:"<<sizeof(Info)<<endl;
 	cout<<"sizeof the object of Info:"<<sizeof(alice)<<endl;
+	//
+	cout<<"LinkList Init.<<<<<<<<<<<<<<<<<<<<<"<<endl;
+	linkList.Insert(alice,0);
+	linkList.Insert(bob,1);
 
 
 }
