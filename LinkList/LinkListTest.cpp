@@ -130,13 +130,13 @@ void LinkList::Reverse()
 		temp=temp->next;
 	}
 #endif
-	//先到一下链表的尾部去
-	while(temp!=NULL)
-		temp=temp->next;
-	//现在temp已经指向最后的节点
-	cout<<temp->val.name<<temp->val.id<<endl;
+	//先到一下链表的尾部去--下面方法使temp变成了NULL
+	//while(temp!=NULL)
+	//	temp=temp->next;
+	//现在temp已经指向最后的节点,temp已经变成空了
+	//cout<<temp->val.name<<temp->val.id<<endl;
 	//开始反转
-	head=temp->next;
+	
 	while(temp!=NULL)
 	{
 	head=temp->next;
@@ -188,6 +188,8 @@ int main(int argc,char** argv)
 	//cout<<linkList.length<<endl;//内部私有成员不可访问
 
 	linkList.Print();
+	cout<<"This is reverse"<<endl;
+	linkList.Reverse();
 
 
 }
