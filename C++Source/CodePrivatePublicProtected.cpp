@@ -182,6 +182,8 @@ Base *k;//这样是不调用构造函数的是，在32位机上
 ////main founction
 
 #ifdef USE_3P
+//测试私有构造
+//PrivateClass privateClass;//这里会报错，调用构造也是外部的，私有在类外无法访问。
 BaseMulti baseMulti;//这里会调用继承的父类的构造方法
 Base base,base1;//这里声明（应该叫定义）一下Base对象为什么会调用构造方法
 //test multi extend
