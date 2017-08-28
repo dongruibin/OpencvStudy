@@ -43,10 +43,10 @@
 //#define USE_LinkList 1
 
 //测试私有继承，公有继承，保护继承
-#define USE_3P 1
+//#define USE_3P 1
 
 //测试C++内存分布在哪里
-//#define CODESTORE 1
+#define CODESTORE 1
 
 //测试霍夫变换
 //#define HoughDemo 1

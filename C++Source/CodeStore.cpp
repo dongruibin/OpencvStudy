@@ -32,7 +32,7 @@ using namespace std;
 
 
 //全局初始化变量
-int g_i=100;
+int g_i=100;//这个是定义+声明
 int g_j=200;
 int g_k,g_h;
 
@@ -58,7 +58,6 @@ struct X3
 char* p;//4个字节
 char* p_init_null=NULL;
 char * p_init="dong";
-
 /*
 变量定义：用于为变量分配存储空间，还可以为变量指定初识值，在程序
 	中变量有且只有一个定义
@@ -68,6 +67,26 @@ char * p_init="dong";
 	占有一个字节，所以占有第二个4字节组中的第一格，第三也是char类型
 	所以它也占一个字节，它就排在第二个组块的第二格。
 */
+
+//添加学习定义和声明的使用
+/*
+资料参考地址：http://www.cnblogs.com/genli/articles/2261097.html
+c++中当创建一个对象时会自动调用它的构造函数-d
+但是如果程序中有goto语句调过或者对象时在switch中声明，在编译的时候会报错。
+c++常见的数据结构有struct、enum、union、class。
+例如定义:
+struct student{
+char* name;
+int age;
+};
+这个时候是通知编译器有了student这种struct这种类型，并没有内存分配。
+只有当声明一个对象时，即student s;时，编译器才会给变量s分配内存，且内存
+大小为student结构体大小。
+且内存大小为student大小。
+	另外程序都是通过编译器编译成功后生成目标文件，才能执行的。当然走到
+变量声明处，才会个它分配内存。
+*/
+
 int main(int argc,char** argv)
 {
 	cout<<"float:"<<sizeof(float)<<endl;//sizeof是关键字
