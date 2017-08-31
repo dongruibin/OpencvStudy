@@ -106,6 +106,7 @@
     </ClCompile>
     <ClCompile Include="..\..\..\FeatureCode\surfTest.cpp" />
     <ClCompile Include="..\..\..\ImagePro\AnswerCard.cpp" />
+    <ClCompile Include="..\..\..\ImagePro\calibration.cpp" />
     <ClCompile Include="..\..\..\ImagePro\HoughDemo.cpp" />
     <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp" />
     <ClCompile Include="..\..\..\LinkList\LinkListTest.cpp" />
