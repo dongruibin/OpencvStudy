@@ -160,6 +160,7 @@ static bool readStringList( const string& filename, vector<string>& l )
     return true;
 }
 
+#ifdef Calibration
 
 int main( int argc, char** argv )
 {
@@ -363,3 +364,4 @@ int main( int argc, char** argv )
 
     return 0;
 }
+#endif

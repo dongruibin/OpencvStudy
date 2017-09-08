@@ -46,7 +46,7 @@ int array[10] = { 0 };
 //说明 vector可以使用的元素不仅可以是int float double，也可以是全局结构体
 int main(int argc,char **argv)
 {
-	vector<Rect> vec;
+	vector<Rect> vec;//这是声明吧？
 	Rect rect;
 	rect.id = 1;
 	rect.length = 2;

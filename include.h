@@ -16,7 +16,7 @@
 
 //定义使用调用哪个文件进行测试
 //#define USE_TEST 1
-//#define USE_VECTOR 1
+#define USE_VECTOR 1
 //#define USE_DISPLAYIMAGE 1
 //#define USE_ROI 1
 //#define USE_WAYTOACCESSPIXEL 1
@@ -52,7 +52,7 @@
 //#define HoughDemo 1
 
 //测试3d calibration
-#define Calibration 1
+//#define Calibration 1
 
 
 ///////////程序释疑说明////
