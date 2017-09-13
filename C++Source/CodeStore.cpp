@@ -36,6 +36,9 @@ int g_i=100;//这个是定义+声明
 int g_j=200;
 int g_k,g_h;
 
+//以下测试使用字节对齐功能。
+//#pragma pack(1)//使用1字节对齐，默认是4字节对齐
+
 struct X1
 {
 	int i;//4字节
@@ -54,6 +57,7 @@ struct X3
 	char c2;//2字节
 	int i;//4字节
 };
+
 #ifdef CODESTORE
 char* p;//4个字节
 char* p_init_null=NULL;
