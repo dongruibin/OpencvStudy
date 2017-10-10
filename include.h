@@ -16,7 +16,7 @@
 
 //定义使用调用哪个文件进行测试
 //#define USE_TEST 1
-#define USE_VECTOR 1
+//#define USE_VECTOR 1
 //#define USE_DISPLAYIMAGE 1
 //#define USE_ROI 1
 //#define USE_WAYTOACCESSPIXEL 1
@@ -43,7 +43,7 @@
 //#define USE_LinkList 1
 
 //测试私有继承，公有继承，保护继承
-//#define USE_3P 1
+#define USE_3P 1
 
 //测试C++内存分布在哪里
 //#define CODESTORE 1

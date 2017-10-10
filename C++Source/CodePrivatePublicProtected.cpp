@@ -55,7 +55,7 @@ void Base::ChangeMember()
 }
 
 
-//private implement
+//private implement，私有继承，原来成员的属性变了
 class BasePrivate:private Base
 {
 public:
@@ -78,6 +78,7 @@ class BasePublic:public Base
 public:
 	void PrintInfo()
 	{
+		cout<<"This is BasePublic class is overlap Base!"<<endl;
 	}
 };
 //protected implement
