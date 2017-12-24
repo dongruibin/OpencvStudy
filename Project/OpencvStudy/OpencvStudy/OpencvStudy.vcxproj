@@ -87,6 +87,7 @@
     <ClCompile Include="..\..\..\C++Source\ConstTest.cpp" />
     <ClCompile Include="..\..\..\C++Source\FunPointer.cpp" />
     <ClCompile Include="..\..\..\C++Source\operatorStudy.cpp" />
+    <ClCompile Include="..\..\..\C++Source\sizeof_strlen.cpp" />
     <ClCompile Include="..\..\..\C++Source\TemplateDef.cpp" />
     <ClCompile Include="..\..\..\DesignModel\Singleton.cpp">
       <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</CompileAsManaged>
