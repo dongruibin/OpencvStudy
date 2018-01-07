@@ -22,7 +22,7 @@ using namespace cv;
 int main(int argc,char** argv)
 {
 	Mat src;
-	src=imread("D:\\4.jpg");
+	src=imread("D:\\2.jpg");
 	imshow("Test",src);
 	cout<<"This program is ok!"<<endl;
 	waitKey(6000);

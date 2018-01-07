@@ -46,7 +46,10 @@
 //#define USE_3P 1
 
 //siezeof strlen区别
-#define USE_sizeof_strlen 1
+//#define USE_sizeof_strlen 1
+
+//opencv实例使用车牌识别系统
+#define USE_car 1
 
 //测试C++内存分布在哪里
 //#define CODESTORE 1
