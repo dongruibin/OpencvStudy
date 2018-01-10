@@ -2,6 +2,7 @@
 #include<iostream>
 #include<opencv2/opencv.hpp>
 //²Î¿¼£ºhttp://blog.csdn.net/xukaiwen_2016/article/details/53525988
+//opencv ann²Î¿¼demo£ºhttps://www.cnblogs.com/chenzhefan/p/7629441.html
 
 
 

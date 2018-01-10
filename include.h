@@ -49,7 +49,8 @@
 //#define USE_sizeof_strlen 1
 
 //opencv实例使用车牌识别系统
-#define USE_car 1
+//#define USE_car 1
+#define USE_ann 1//用来学习机器学习
 
 //测试C++内存分布在哪里
 //#define CODESTORE 1
