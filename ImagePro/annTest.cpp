@@ -33,7 +33,7 @@ int main(int argc,char** argv)
 	bp.create(layerSizes, CvANN_MLP::SIGMOID_SYM);//激活函数为SIGMOID函数，还可使用高斯函数(CvANN_MLP::GAUSSIAN)，阶跃函数(CvANN_MLP::IDENTITY)    
 	bp.train(trainingDataMat, labelsMat, Mat(), Mat(), params);  
 
-	//bp.save("bp.xml");//存储模型  
+	bp.save("bp.xml");//存储模型  
 	//bp.load("bp.xml");//读取模型  
 
 	Mat sampleMat = (Mat_<float>(1, 2) << 160, 52); //测试数据，为一男生  
