@@ -112,6 +112,7 @@
     <ClCompile Include="..\..\..\ImagePro\carCode.cpp" />
     <ClCompile Include="..\..\..\ImagePro\HoughDemo.cpp" />
     <ClCompile Include="..\..\..\ImagePro\LocationTest.cpp" />
+    <ClCompile Include="..\..\..\ImagePro\markObject.cpp" />
     <ClCompile Include="..\..\..\LinkList\LinkListTest.cpp" />
     <ClCompile Include="..\..\..\ObjectDect\MultipleImageWindow.cpp" />
     <ClCompile Include="..\..\..\ObjectDect\ObjectDect.cpp" />
