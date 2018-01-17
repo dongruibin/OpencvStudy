@@ -55,6 +55,23 @@ int main(int argc,char** argv)
 	Mat element=getStructuringElement(MORPH_RECT,Size(40,40));
 	morphologyEx(midImg1,midImg2,MORPH_CLOSE,element);
 	imshow("close algorthm",midImg2);
+	
+	//开始查找图像轮廓
+	//1、先来构建一个空图像
+	Mat midImg3=Mat::zeros(midImg2.rows,midImg2.cols,CV_8UC3);
+	//Mat midImg4=Mat(midImg2.rows,midImg2.cols,size)
+	//imshow("midImg3",midImg3);//创建的为什么是黑色（0-黑，255-白？？）
+#if 1	
+	cv::Vec3b *datt=srcImg.ptr<Vec3b>(0);//后面参数是列参数，是获取整列像素指针？
+	Vec3b dadd=datt[1];
+	cout<<"the midImg3 row1 is:"<<&dadd[1]<<endl;//datt是一个指向Vec3b的
+	//上面的datt是一个指向Vec3b的指针，(datt直接count是指针地址)
+#endif
+	vector<vector<Point>> contours;
+	vector<Vec4i> hierarchy;
+
+
+
 
 	waitKey(600000);//waitKey本质是什么？
 	return 0;
