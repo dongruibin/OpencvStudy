@@ -64,6 +64,9 @@
 //mark object
 #define USE_markObject 1
 
+//circinal	Queue
+//#define USE_CirQueue 1
+
 
 ///////////ณฬะ๒สอาษหตร๗////
 /*
