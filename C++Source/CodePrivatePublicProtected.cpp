@@ -10,6 +10,8 @@ public:
 	Base();
 	void PrintInfo();
 	static void ChangeMember();
+	//添加一个友元函数，友元函数不属于任何类，是直接访问类的私有变量的非成员函数。
+	friend void BaseTest();//实现在类外面
 private:
 	int a1;
 	static int a;//静态 私有变量。
@@ -29,6 +31,12 @@ public:
 		cout<<"This friend function:"<<f<<endl;
 	}
 };//always forget
+//friend函数
+ void BaseTest()
+{
+	printf("这是友元函数测试！！\n");
+	//cout<<"Base私有变量a1的值是："<<a.a1<<endl;
+}
 
 
 Base::Base():a2(5),a1(5),a3(5)//,a(5)---静态类数据无法通过构造函数初始化---理由是什么？
@@ -187,12 +195,16 @@ Base *k;//这样是不调用构造函数的是，在32位机上
 //PrivateClass privateClass;//这里会报错，调用构造也是外部的，私有在类外无法访问。
 BaseMulti baseMulti;//这里会调用继承的父类的构造方法
 Base base,base1;//这里声明（应该叫定义）一下Base对象为什么会调用构造方法
+//定义和声明说明
+int a;//对于变量来说，定义就是声明，对于头文件之类的，头文件里面叫声明，实现过程叫定义！
 //test multi extend
 int main(int argc,char** argv)
 {
 	cout<<"This program is test the private pulic protected"<<endl;
 	cout<<"The argv[0] is :"<<argv[0]<<endl;//Is it the exe file?
-
+	//friend function test!
+	cout<<"This is a friendly function test！"<<endl;
+	BaseTest();
 	/////vector use
 	cout<<"<<<<<<<<<<<<<<<<<Demo of test vector<<<<<<<<<<<<<<<<"<<endl;
 	for(int i=0;i<10;i++)

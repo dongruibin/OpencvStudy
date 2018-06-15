@@ -43,7 +43,7 @@
 //#define USE_LinkList 1
 
 //测试私有继承，公有继承，保护继承
-//#define USE_3P 1
+#define USE_3P 1
 
 //siezeof strlen区别
 //#define USE_sizeof_strlen 1
@@ -62,7 +62,7 @@
 //#define Calibration 1
 
 //mark object
-#define USE_markObject 1
+//#define USE_markObject 1
 
 //circinal	Queue
 //#define USE_CirQueue 1
