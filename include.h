@@ -43,7 +43,7 @@
 //#define USE_LinkList 1
 
 //测试私有继承，公有继承，保护继承
-#define USE_3P 1
+//#define USE_3P 1
 
 //siezeof strlen区别
 //#define USE_sizeof_strlen 1
@@ -67,6 +67,14 @@
 //circinal	Queue
 //#define USE_CirQueue 1
 
+//Singleton mode
+//#define SingleMode 1
+
+//Boost 
+//#define BoostLib 1
+
+//shared_ptr
+#define SHARED_PTR 1
 
 ///////////程序释疑说明////
 /*

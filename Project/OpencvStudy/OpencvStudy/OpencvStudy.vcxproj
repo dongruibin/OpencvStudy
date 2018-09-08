@@ -133,6 +133,8 @@
     <ClCompile Include="..\..\..\OpencvStudy\SurfTest.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\VectorTest.cpp" />
     <ClCompile Include="..\..\..\OpencvStudy\WayToAccessPixel.cpp" />
+    <ClCompile Include="BoostLib.cpp" />
+    <ClCompile Include="Shared_ptr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\include.h" />
