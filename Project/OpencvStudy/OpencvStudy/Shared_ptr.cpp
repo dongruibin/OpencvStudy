@@ -41,11 +41,12 @@
 #include "include.h"
 #include <iostream>
 #include <memory>//shared_ptr使用
+//#include <thread>
 
 #ifdef SHARED_PTR
 using namespace std;
 
-
+#if 0 //简易测试
 int main(int argc,char** argv)
 {
 	int a = 10;
@@ -63,6 +64,27 @@ int main(int argc,char** argv)
 	cout<<ptrb.use_count()<<endl;
 	return 0;
 }
+#else
+//确认在多线程中使用的优势
+//参考：https://blog.csdn.net/infoworld/article/details/50738494
+struct Base
+{
+	Base(){cout<<"Base construct!!"<<endl;}
+	~Base(){cout<<"~Base!!"<<endl;}
+};
+struct Derived: public Base
+{
+	Derived(){cout<<"Derived construct!!"<<endl;}
+	~Derived(){cout<<"~Derived!!"<<endl;}
+};
+
+
+int main(int argc,char** argv)
+{
+	cout<<"*****This is demo of shared_ptr********"<<endl;
+	return 0;
+}
+#endif
 
 
 #endif
